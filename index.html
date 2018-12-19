@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<link href="./css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<link href="./css/app.css" rel="stylesheet" id="app-css">
+<script src="./js/bootstrap.min.js"></script>
+<script type="text/javascript" src="./js/jquery-1.7.1.min.js"></script>
+<script type="text/javascript" src="./js/app.js"></script>
+
+
+Row Count:<input type="text" id="rowcount"/>
+Column Count:<input type="text" id="columncount"/>
+<input type="button" onclick="createTable();" value="Create Table"/>
+<div class="card">
+    <div class="card-header">
+        <div class="row">
+            <div class="col-lg-6">
+                <label for="iName">Name:</label>
+                <input class="form-control" type="text" id="iName" maxlength="50">
+                <label for="iMail">eMail:</label>
+                <input class="form-control" type="text" id="iMail" maxlength="50">
+            </div>
+            <div class="col-lg-6">
+                <label for="iComment">Comment:</label>
+                <textarea class="form-control" rows="4" id="iComment" maxlength="300"></textarea>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-3">
+                <button class="btn btn-primary btn-block" onclick="createTable();">
+                    Записать
+                </button>
+            </div>
+        </div>
+    </div>
+    <div class="card-body" id="box">
+    </div>
+</div>
+</body>
+</html>
