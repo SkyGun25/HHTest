@@ -27,8 +27,13 @@ public class App {
                         os.println(SearchOccurencesNumber.search(file, word));
                         break;
                     case "3":
+                        String expression = scanner.next();
+                        os.println(SimleCalc.calc(expression));
                         break;
                     case "4":
+                        String source = scanner.next();
+                        String copy = scanner.next();
+                        FileCopy.copyFile(source, copy, os);
                         break;
                     default:
                         isRun = false;

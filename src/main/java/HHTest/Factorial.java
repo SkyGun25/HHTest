@@ -1,7 +1,5 @@
 package HHTest;
 
-import java.math.BigInteger;
-
 public class Factorial {
 
     public static long calculate(long n) {

@@ -1,24 +1,27 @@
 package HHTest;
 
-
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Paths;
 
 public class SearchOccurencesNumber {
 
-    public static int search(String fileName, String word) {
+    public static int search(String fileName, String word) throws IOException {
         if (word == null || word.isEmpty()) {
             return 0;
         }
 
-        StringBuffer buffer = new StringBuffer("qew asd zxc qwe gfh rtyj saatg qwe ggg jjqwejj");
+        String content = new String(Files.readAllBytes(Paths.get(fileName)), "UTF-8");
+        StringBuilder sb = new StringBuilder(content);
 
-        int index = buffer.lastIndexOf(word);
+        int index = sb.lastIndexOf(word);
         int counter = 0;
 
         while (index > -1) {
             counter++;
 
-            buffer.delete(index, index + word.length());
-            index = buffer.lastIndexOf(word);
+            sb.delete(index, index + word.length());
+            index = sb.lastIndexOf(word);
         }
 
         return counter;
